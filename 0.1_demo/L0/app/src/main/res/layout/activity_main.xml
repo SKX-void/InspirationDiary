@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pageEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head" />
+
+    <ScrollView
+        android:id="@+id/rollIndex"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:paddingTop="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/index"
+                android:layout_width="200dp"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="50dp"
+                android:background="#FFDDAE"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/index_template"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:background="@color/white"
+                    android:text="目录"
+                    app:rippleColor="#F49898" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="#F6E5D0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fileButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:drawableTint="#4B8154"
+        android:text="文件"
+        android:textColorLink="#39F8F8"
+        app:iconTint="#59D452"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#33E6D1" />
+
+
+
+
+
+    <Button
+        android:id="@+id/indexButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="目录"
+        app:layout_constraintStart_toEndOf="@+id/fileButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/newPage"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:text="翻页"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/indexButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cleantest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="clean"
+        app:layout_constraintStart_toEndOf="@+id/newPage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
